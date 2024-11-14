@@ -8,9 +8,9 @@ Embora esta especificação de aplicação dependa fortemente de JavaScript, sin
 
 ## Histórias de Usuários
 
-- [ ] O usuário pode ver o status atual para operações Git do GitHub, solicitações de API, problemas operacionais, PRs, Dashboard e Projetos, Notificações Operacionais, Gists Operacionais e Páginas Operacionais do GitHub como uma lista na janela principal do aplicativo.
+- [X] O usuário pode ver o status atual para operações Git do GitHub, solicitações de API, problemas operacionais, PRs, Dashboard e Projetos, Notificações Operacionais, Gists Operacionais e Páginas Operacionais do GitHub como uma lista na janela principal do aplicativo.
 - [X] O usuário pode recuperar o status mais recente do site GitHub Status clicando em um botão 'Obter Status'.
 
 ## Funcionalidades bônus
 
-- [ ] O usuário pode ver qualquer um dos componentes do GitHub que não estão em status 'Operacional' destacados por uma cor diferente, animação de fundo, ou qualquer outra técnica para fazê-lo se destacar. Use sua imaginação!
+- [X] O usuário pode ver qualquer um dos componentes do GitHub que não estão em status 'Operacional' destacados por uma cor diferente, animação de fundo, ou qualquer outra técnica para fazê-lo se destacar. Use sua imaginação!

@@ -2,103 +2,140 @@
 
 /* Estilos globais */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  div {
-    width: 90%;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: "#255";
-    border-radius: 8px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
 
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #2d8cf0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+button:disabled {
+  background-color: #b0d7f9;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #1e7ed9;
+}
+
+/* Estilos para o status */
+p {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0;
+}
+
+p.status {
+  font-weight: bold;
+  color: #2d8cf0;
+}
+
+p.updated-at {
+  font-style: italic;
+  font-weight: bold;
+  color: #777;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* Estilos para a mensagem de erro */
+p.error {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Estilos para componentes e listas */
+.components-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.component-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.incidents-list, .maintenances-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+/* Efeito de destaque para componentes com problemas */
+.highlight {
+  background-color: #ffeb3b;
+  border-color: #f57c00;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      background-color: #ffeb3b;
   }
-  
+  50% {
+      transform: scale(1.05);
+      background-color: #ffc107;
+  }
+  100% {
+      transform: scale(1);
+      background-color: #ffeb3b;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
   h1 {
-    font-size: 24px;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #2d8cf0;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-bottom: 20px;
-  }
-  
-  button:disabled {
-    background-color: #b0d7f9;
-    cursor: not-allowed;
-  }
-  
-  button:hover:not(:disabled) {
-    background-color: #1e7ed9;
-  } 
-  
-  /* Estilos para o status */
-  p {
-    font-size: 16px;
-    color: #555;
-    margin: 10px 0;
-  }
-  
-  p:last-child {
-    margin-bottom: 0;
-  }
-  
-  p.status {
-    font-weight: bold;
-    color: #2d8cf0;
-  }
-  
-  p.updated-at {
-    font-style: italic;
-    font-weight: bold;
-    color: #777;
-    font-size: 16;
-  }
-  
-  /* Estilos para a mensagem de erro */
-  p.error {
-    color: red;
-    font-weight: bold;
-    text-align: center;
+      font-size: 20px;
   }
 
-  .container{
-    background-color: #f1f1f1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Responsividade */
-  @media (max-width: 600px) {
-    h1 {
-      font-size: 20px;
-    }
-  
-    button {
+  button {
       font-size: 14px;
-    }
-  
-    p {
-      font-size: 14px;
-    }
   }
-  
+
+  p {
+      font-size: 14px;
+  }
+}

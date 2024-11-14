@@ -10,8 +10,7 @@ export const fetchData = async (url: string): Promise<GitHubStatusResponse> => {
 // Função para buscar o status do GitHub
 export const fetchGitHubStatus = async (fetchFunction = fetchData): Promise<GitHubStatusResponse> => {
   try {
-    const data: GitHubStatusResponse = await fetchFunction('https://www.githubstatus.com/api/v2/status.json');
-    console.log(data);  // Para depuração, pode ser removido depois
+    const data: GitHubStatusResponse = await fetchFunction('https://www.githubstatus.com/api/v2/summary.json');
     return data;
   } catch (error) {
     console.error('Erro ao obter status do GitHub', error);
