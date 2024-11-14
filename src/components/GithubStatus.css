@@ -17,14 +17,14 @@ body {
   max-width: 500px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: #f1f1f1;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 h1 {
   font-size: 24px;
-  color: #333;
+  color: #222; /* Cor mais escura para maior contraste */
   text-align: center;
   margin-bottom: 20px;
 }
@@ -33,7 +33,7 @@ button {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #2d8cf0;
+  background-color: #1a73e8; /* Azul mais escuro para melhor contraste */
   color: white;
   border: none;
   border-radius: 4px;
@@ -44,30 +44,30 @@ button {
 }
 
 button:disabled {
-  background-color: #b0d7f9;
+  background-color: #8ab4f8; /* Azul claro com contraste suficiente */
   cursor: not-allowed;
 }
 
 button:hover:not(:disabled) {
-  background-color: #1e7ed9;
+  background-color: #185abc; /* Azul escuro para contraste */
 }
 
 /* Estilos para o status */
 p {
   font-size: 16px;
-  color: #555;
+  color: #333; /* Melhor contraste */
   margin: 10px 0;
 }
 
 p.status {
   font-weight: bold;
-  color: #2d8cf0;
+  color: #1a73e8; /* Azul mais escuro para maior contraste */
 }
 
 p.updated-at {
   font-style: italic;
   font-weight: bold;
-  color: #777;
+  color: #555; /* Cor mais escura */
 }
 
 p:last-child {
@@ -76,7 +76,7 @@ p:last-child {
 
 /* Estilos para a mensagem de erro */
 p.error {
-  color: red;
+  color: #d32f2f; /* Vermelho mais escuro para melhor contraste */
   font-weight: bold;
   text-align: center;
 }
@@ -91,7 +91,7 @@ p.error {
 .component-item {
   margin-bottom: 15px;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #bbb; /* Cor da borda ajustada para contraste */
   border-radius: 4px;
   background-color: #f9f9f9;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -105,37 +105,37 @@ p.error {
 
 /* Efeito de destaque para componentes com problemas */
 .highlight {
-  background-color: #ffeb3b;
-  border-color: #f57c00;
+  background-color: #ffcc00; /* Amarelo mais escuro para contraste */
+  border-color: #e65100; /* Laranja mais escuro */
   animation: pulse 1.5s infinite;
 }
 
 @keyframes pulse {
   0% {
-      transform: scale(1);
-      background-color: #ffeb3b;
+    transform: scale(1);
+    background-color: #ffcc00;
   }
   50% {
-      transform: scale(1.05);
-      background-color: #ffc107;
+    transform: scale(1.05);
+    background-color: #ffaa00; /* Amarelo mais escuro */
   }
   100% {
-      transform: scale(1);
-      background-color: #ffeb3b;
+    transform: scale(1);
+    background-color: #ffcc00;
   }
 }
 
 /* Responsividade */
 @media (max-width: 600px) {
   h1 {
-      font-size: 20px;
+    font-size: 20px;
   }
 
   button {
-      font-size: 14px;
+    font-size: 14px;
   }
 
   p {
-      font-size: 14px;
+    font-size: 14px;
   }
 }
